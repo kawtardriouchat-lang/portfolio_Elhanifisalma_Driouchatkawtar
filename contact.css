@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #edf1f5, #d9e1e8);
+    min-height: 100vh;
+    padding: 20px;
+    color: #1f1f1f;
+}
+
+.page-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 1.2fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.contact-page {
+    background: #f8f8f8;
+    border-radius: 30px;
+    padding: 18px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    margin-bottom: 18px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar ul li {
+    color: #8e7339; 
+    padding: 5px 0;
+    font-family: Ibarra Real Nova;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #161616;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 450;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #b89a5f;
+}
+
+.navbar .logo {
+    color: #b89a5f;
+    font-weight: 700;
+}
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000; 
+    padding: 5px 0;
+    transition: 0.3s;
+    font-family: Ibarra Real Nova;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #b49a58;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #b49a58;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: #8e7339;
+    letter-spacing: 5px;
+    font-weight: 600;
+    text-shadow: 0 3px 10px rgba(255,255,255,0.3);
+    margin-top: -100px;
+
+}
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.info-card {
+    background: #d9d1c7;
+    padding: 28px;
+    border-radius: 0;
+    min-height: 310px;
+}
+
+.info-item {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #242424;
+    margin-top: 5px;
+}
+
+.info-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.email-box {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.email-box i {
+    font-size: 2rem;
+    margin-top: 6px;
+}
+
+.email-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+}
+
+.email-box p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.map-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contact-form {
+    background: #f8f8f8;
+    border-radius: 30px;
+    padding: 35px 28px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    min-height: 100%;
+}
+
+.contact-form h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 18px 20px;
+    border: 2px solid #d7cfbd;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b89a5f;
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.contact-form button {
+    background: #b8a06d;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+    background: #9c8350;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4rem;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
